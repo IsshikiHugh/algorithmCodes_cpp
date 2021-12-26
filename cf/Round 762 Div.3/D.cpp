@@ -60,8 +60,6 @@ int main(){
         // cout << "debug::  " << minTop1ByFriends << "   " << maxTop2ByShops << "  \n";
         cout << std::min(minTop1ByFriends,maxTop2ByShops) << "\n";
     }
-
-
     return 0;
 }
 

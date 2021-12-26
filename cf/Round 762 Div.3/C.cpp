@@ -68,9 +68,6 @@ int main(){
         }
         if(isZero) cout << "-1";
         cout << "\n";
-
     }
-
-
     return 0;
 }
