@@ -33,13 +33,22 @@ void solve(){
         cout << "-1\n";
         return;
     }
+    if(n == k+1){
+        cout << n-1 << " " << n-2 << "\n";
+        cout << 1 << " " << n-3 << "\n";
+        cout << 0 << " " << ((n-1)^(n-3)) << "\n";
+        rep(i,3,n/2-1){
+            cout << i << " " << ((n-1)^i) << "\n";
+        }   
+        return;
+    }
 
     cout << n-1 << " " << k << "\n";
-    cout << ((n-1)^k) << " " << 0 << "\n";
-    rep(i,1,n/2){
-        if(i == k || i == ((n-1)^k)) continue;
+    if(k != 0) cout << ((n-1)^k) << " " << 0 << "\n";
+    rep(i,1,n/2-1){
+        if(i == k || i == ((n-1)^k) || ((n-1)^i) == k) continue;
         cout << i << " " << ((n-1)^i) << "\n";
-    }
+    }   
     return;
 }
 
