@@ -31,14 +31,12 @@ $$
 ### 常数做法
 
 $$
-
-x \times y \, \% \,mod = x\times y - \lfloor\frac{x\times y}{mod}\rfloor\times mod
-
+x \times y  \mod p = x\times y - \lfloor\frac{x\times y}{p}\rfloor\times p
 $$
 
 尽管右式中两项都必然会超过 `long long` 的范围，但显然答案不会，即两项的差在这个范围内： $[0,mod-1]$ ，这就意味着，再往高位的数字相减结果为0。然而即使他们溢出，这个结果也不会改变，所以我们无需在意高位的溢出。
 
-此外，计算 $\frac{x\times y}{mod}$ 需要借助`long doule`。
+此外，计算 $\frac{x\times y}{p}$​ 需要借助`long doule`。
 
 
 
