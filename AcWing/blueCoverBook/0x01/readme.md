@@ -38,5 +38,16 @@ $$
 
 此外，计算 $\frac{x\times y}{p}$​ 需要借助`long doule`。
 
+## 最短Hamilton路径
 
+状压n个点的访问状态
 
+转移方程：
+
+$$
+
+dp_{i,j} = \min\{ dp_{i\oplus(1<<j),k}+dis_{j,k} \} 
+\\
+k \neq j \text{且} j,k\in[0,n-1],\;i\in[1,(1<<n)-1]
+
+$$
